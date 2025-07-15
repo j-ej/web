@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조은정 - 이력서</title>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="resume-bg">
+  <div class="resume-card">
+    <div class="resume-header">
+      <div class="profile-block">
+        <img class="profile-photo-large" src="sw.jpg" alt="조은정 프로필 사진" />
+        <div class="profile-main-info">
+          <h1>조은정</h1>
+          <h2>교수, 사회복지사</h2>
+        </div>
+      </div>
+      <div class="contact-block">
+        <div><i class="fa-solid fa-phone"></i> 010-1234-5678</div>
+        <div><i class="fa-solid fa-envelope"></i> hello@email.com</div>
+        <div><i class="fa-solid fa-globe"></i> www.mywebsite.com</div>
+        <div class="contact-icons">
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">경력 사항 | <span>WORK EXPERIENCE</span></div>
+    <div class="work-section">
+      <div class="work-col">
+        <div class="work-item">
+          <div class="work-title">일본, 아동가정종합연구소(촉탁연구원)</div>
+          <div class="work-period">2000-2004</div>
+          <div class="work-desc">아동 및 가족 관련 연구</div>
+        </div>
+      </div>
+      <div class="work-col">
+        <div class="work-item">
+          <div class="work-title">동서대학교(교수)</div>
+          <div class="work-period">2004-현재</div>
+          <div class="work-desc">사회복지학 - 아동가족복지, 실천 연구</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">담당교과목 | <span>SUBJECTS</span></div>
+    <div class="skills-section">
+      <div class="skill-chart">
+        <img src="c.jpg" alt="사회복지상담론 관련 이미지" style="width:80px; height:80px; object-fit:cover; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,0.06); margin-bottom:4px;" />
+        <div class="skill-label">사회복지상담론</div>
+      </div>
+      <div class="skill-chart">
+        <img src="children.jpg" alt="아동복지론 관련 이미지" style="width:80px; height:80px; object-fit:cover; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,0.06); margin-bottom:4px;" />
+        <div class="skill-label">아동복지론</div>
+      </div>
+      <div class="skill-chart">
+        <img src="swsw.jpg" alt="사회복지실천기술론 관련 이미지" style="width:80px; height:80px; object-fit:cover; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,0.06); margin-bottom:4px;" />
+        <div class="skill-label">사회복지실천기술론</div>
+      </div>
+      <div class="skill-chart">
+        <img src="FT.jpg" alt="가족상담및가족치료 관련 이미지" style="width:80px; height:80px; object-fit:cover; border-radius:12px; box-shadow:0 1px 4px rgba(0,0,0,0.06); margin-bottom:4px;" />
+        <div class="skill-label">가족상담및가족치료</div>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <div class="edu-license">
+        <div class="edu-block">
+          <div class="section-title">학력 | <span>EDUCATION</span></div>
+          <table class="info-table">
+            <tr><th>학교명</th><th>전공</th><th>졸업년도</th></tr>
+            <tr><td>숭실대학교 대학원</td><td>사회사업학과</td><td>1997</td></tr>
+            <tr><td>일본사회사업대학 대학원</td><td>사회복지연구과</td><td>2007</td></tr>
+          </table>
+        </div>
+        <div class="license-block">
+          <div class="section-title">자격증 | <span>LICENSE</span></div>
+          <table class="info-table">
+            <tr><th>자격증명</th><th>발급기관</th><th>취득년도</th></tr>
+            <tr><td>사회복지사1급</td><td>보건복지부</td><td>1995</td></tr>
+            <tr><td>운전면허1종</td><td>경찰청</td><td>1997</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="guestbook.js"></script>
+  <script>
+    // 도넛 차트 그리기
+    function drawDonut(canvasId, percent, color) {
+      const canvas = document.getElementById(canvasId);
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, 80, 80);
+      ctx.beginPath();
+      ctx.arc(40, 40, 32, 0, 2 * Math.PI);
+      ctx.strokeStyle = '#e0e6f6';
+      ctx.lineWidth = 12;
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(40, 40, 32, -Math.PI/2, (2 * Math.PI) * percent - Math.PI/2);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 12;
+      ctx.stroke();
+    }
+    drawDonut('skill1', 0.95, '#1a2956');
+    drawDonut('skill2', 0.85, '#3b4d7a');
+    drawDonut('skill3', 0.80, '#6c7a89');
+    drawDonut('skill4', 0.70, '#b3c6ff');
+  </script>
+</body>
+</html> 
